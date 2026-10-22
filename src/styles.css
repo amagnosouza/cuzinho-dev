@@ -216,3 +216,17 @@ body.panic .skyline i{border-color:var(--hot)}
   .skyline{opacity:.7}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* patrocínio */
+.donate{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:clamp(24px,5vw,56px);align-items:start}
+.qr{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.donate-info{display:grid;gap:20px;min-width:0}
+.donate-info p{margin:0;color:var(--ink-soft);max-width:52ch}
+.tiers{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px}
+.tier{display:grid;gap:4px;text-align:left;font:inherit;background:transparent;border:1px solid var(--line);padding:12px 14px;cursor:pointer;color:var(--ink)}
+.tier:hover{border-color:var(--ink)}
+.tier>b{font-weight:400;font-size:22px;letter-spacing:-.03em}
+.tier>span{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.tier[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.tier[aria-pressed=true]>span{color:var(--mute)}
+@media (max-width:720px){.donate{grid-template-columns:1fr}.qr{max-width:260px}}

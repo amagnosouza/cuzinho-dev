@@ -13,6 +13,7 @@ import Elogios from './pages/Elogios'
 import Commit from './pages/Commit'
 import Bingo from './pages/Bingo'
 import Certificado from './pages/Certificado'
+import Patrocine from './pages/Patrocine'
 import NotFound from './pages/NotFound'
 
 const ROUTES: Record<string, ComponentType> = {
@@ -24,6 +25,7 @@ const ROUTES: Record<string, ComponentType> = {
   '/commit': Commit,
   '/bingo': Bingo,
   '/certificado': Certificado,
+  '/patrocine': Patrocine,
 }
 
 const NAV = ['/manifesto', '/tradutor', '/desculpas', '/elogios', '/commit', '/bingo', '/certificado']
@@ -37,6 +39,7 @@ const T = translations(
     status: 'Em obra',
     footer: 'cuzinho.dev · obra iniciada numa sexta às 17:59',
     contribute: 'Contribua via pull request (sem review, claro) ↗',
+    sponsor: 'Financie o próximo deploy de sexta',
   },
   {
     nav: ['Manifesto', 'Translator', 'Excuses', 'Compliments', 'Commit', 'Bingo', 'Certificate'],
@@ -46,6 +49,7 @@ const T = translations(
     status: 'WIP',
     footer: 'cuzinho.dev · construction started on a Friday at 5:59 PM',
     contribute: 'Contribute via pull request (no review, obviously) ↗',
+    sponsor: 'Fund the next Friday deploy',
   },
 )
 
@@ -99,6 +103,7 @@ export default function App() {
 
       <footer><div className="wrap">
         <span>{t.footer}</span>
+        <Link to="/patrocine">{t.sponsor}</Link>
         <a href={REPO_URL} target="_blank" rel="noopener">{t.contribute}</a>
       </div></footer>
     </ToastProvider>

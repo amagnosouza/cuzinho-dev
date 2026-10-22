@@ -60,6 +60,19 @@ export const BADGE_MD = `[![deploy: no cuzinho](https://img.shields.io/badge/dep
 
 export const REPO_URL = 'https://github.com/eduumach/cuzinho-dev'
 
+// Where /patrocine sends the money. An empty field hides that method from the page
+export const DONATE = {
+  pixKey: '38150f8b-e3bc-4612-a317-a5445ca79ed9',
+  pixName: 'Eduardo Machado Rezende', // max 25 chars; banks show the name registered with the key anyway
+  pixCity: 'Uberlandia', // max 15 chars
+  lightning: 'lno1pgqppmsrse80qf0aara4slvcjxrvu6j2rp5ftmjy4yntlsmsutpkvkt6878sy4z8z30k8xlqgmppzpt82ujudnd0zru5jlxez0s9rfe0wj2p3468qgpmdgqtg8s8ujrzecxw5snskdyxgu0kfw5a280h59frnpktn5n9gucqxdqnmaz9l4cnttcmr42jr6hes7yt9w0ke7wtwkkykkvyc95kgd7uzyrzrd6c72zppjl3vmfdqp33r7qxrl4s8883t6mf7rg9xldnacfll86qdzudrjr23ch3mem4szualzueyz84qqeg78p3sexh2jl23ssuvhnngrvcs8ds6a5eyvrd0zx0tjtday5zhrey5pqelqleyyjhzufryfjdwgr9590s', // reusable BOLT12 offer
+  onchain: 'bc1pr45lulk0v0e8n9n754jpqykrhssnpc8kqrpj6c7a4m8dda5lx4ssa7l0wh',
+  kofi: 'eduumach',
+}
+
+// Suggested Pix amounts; the labels live in Patrocine.tsx
+export const PIX_TIERS = [5, 17.59, 50, 500] as const
+
 export type ExcuseTag = 'daily' | 'prod' | 'prazo'
 
 export const EXCUSE_TAGS: { id: ExcuseTag; label: string }[] = [
