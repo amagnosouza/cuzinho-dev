@@ -165,6 +165,45 @@ export const EXCUSES: [text: string, tag: ExcuseTag][] = [
   ['Alguém deixou uma feature flag ligada em produção. Não vou dizer quem. (Fui eu.)', 'prod'],
 ]
 
+export type ComplimentTag = 'classico' | 'review' | 'feedback'
+
+export const COMPLIMENT_TAGS: { id: ComplimentTag; label: string }[] = [
+  { id: 'classico', label: 'Clássicos' },
+  { id: 'review', label: 'Pra code review' },
+  { id: 'feedback', label: 'Pra avaliação de desempenho' },
+]
+
+// Setup and punchline are kept apart so the page can hold a dramatic pause before the twist
+export const COMPLIMENTS: [setup: string, punch: string, tag: ComplimentTag][] = [
+  ['Você tem talento no sangue…', 'pena que não circula.', 'classico'],
+  ['Talento vem de berço…', 'pena que você dormia no chão.', 'classico'],
+  ['Você é um exemplo pro time…', 'de tudo que não é pra fazer.', 'classico'],
+  ['Você ilumina o ambiente…', 'principalmente quando sai da sala.', 'classico'],
+  ['Você é muito inteligente…', 'só falta começar a usar.', 'classico'],
+  ['Você nunca decepciona…', 'porque ninguém espera mais nada.', 'classico'],
+  ['Você tem um raciocínio rapidíssimo…', 'pena que sempre na direção errada.', 'classico'],
+  ['Você é insubstituível…', 'ninguém mais aceita fazer o que você faz.', 'classico'],
+  ['Seu código dispensa comentários…', 'ninguém teria coragem de comentar.', 'review'],
+  ['Seu código é à prova de bugs…', 'porque ele nem roda.', 'review'],
+  ['Seu código é autoexplicativo…', 'ele mesmo explica por que produção caiu.', 'review'],
+  ['Seu código é arte moderna…', 'ninguém entende e todo mundo tem medo de mexer.', 'review'],
+  ['Seus commits contam uma história…', 'de terror.', 'review'],
+  ['Seu código é muito original…', 'nenhuma boa prática chegou perto dele.', 'review'],
+  ['Você escreve código que dura…', 'o hotfix de 2019 tá lá até hoje.', 'review'],
+  ['A descrição do seu PR é impecável…', 'pena que não tem nada a ver com o código.', 'review'],
+  ['Você tem 100% de cobertura de testes…', 'de testes comentados.', 'review'],
+  ['Você é muito proativo…', 'derrubou produção sem ninguém pedir.', 'feedback'],
+  ['Você é ótimo em trabalho em equipe…', 'o time trabalha e você acompanha.', 'feedback'],
+  ['Seu potencial é enorme…', 'tá guardadinho, sem uso nenhum.', 'feedback'],
+  ['Você é muito comunicativo…', 'falou 14 minutos na daily de 15.', 'feedback'],
+  ['Você é muito resiliente…', 'já levou o mesmo bug pra produção cinco vezes.', 'feedback'],
+  ['Você lida muito bem com prazo…', 'simplesmente ignora.', 'feedback'],
+  ['Você entrega muito…', 'bug, principalmente.', 'feedback'],
+  ['Você está sempre à frente do seu tempo…', 'por isso nunca chega na hora da daily.', 'feedback'],
+  ['Você domina IA como ninguém…', 'ninguém mais tem coragem de dar accept all sem ler.', 'feedback'],
+  ['Você não para de evoluir…', 'cada versão do bug sai melhor que a anterior.', 'feedback'],
+]
+
 export const COMMITS = [
   'fix: agora vai',
   'fix: agora vai mesmo',

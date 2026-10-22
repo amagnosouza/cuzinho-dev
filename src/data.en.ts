@@ -1,4 +1,4 @@
-import type { ExcuseTag } from './data'
+import type { ComplimentTag, ExcuseTag } from './data'
 
 // English version of data.ts, localized rather than translated: the jokes have to land for people who never sat
 // through a Brazilian daily. Keep the same order and count: axiom links and bingo boards point at positions
@@ -160,6 +160,42 @@ export const EXCUSES: [text: string, tag: ExcuseTag][] = [
   ['It was a one-line change. The line was 400 characters long.', 'prazo'],
   ['My PR has been waiting for review since the last reorg.', 'daily'],
   ['Someone left a feature flag on in prod. Not saying who. (Me.)', 'prod'],
+]
+
+export const COMPLIMENT_TAGS: { id: ComplimentTag; label: string }[] = [
+  { id: 'classico', label: 'Classics' },
+  { id: 'review', label: 'For code review' },
+  { id: 'feedback', label: 'For performance review' },
+]
+
+export const COMPLIMENTS: [setup: string, punch: string, tag: ComplimentTag][] = [
+  ['You have talent in your blood…', 'shame it doesn’t circulate.', 'classico'],
+  ['You were born with talent…', 'shame you were raised without it.', 'classico'],
+  ['You’re an example for the team…', 'of everything not to do.', 'classico'],
+  ['You light up the room…', 'especially when you leave it.', 'classico'],
+  ['You’re really smart…', 'you just haven’t started using it yet.', 'classico'],
+  ['You never disappoint…', 'because nobody expects anything anymore.', 'classico'],
+  ['You think incredibly fast…', 'shame it’s always in the wrong direction.', 'classico'],
+  ['You’re irreplaceable…', 'nobody else will agree to do what you do.', 'classico'],
+  ['Your code needs no comments…', 'nobody would dare comment on it.', 'review'],
+  ['Your code is bug-proof…', 'because it doesn’t even run.', 'review'],
+  ['Your code is self-explanatory…', 'it explains on its own why prod went down.', 'review'],
+  ['Your code is modern art…', 'nobody gets it and everyone’s scared to touch it.', 'review'],
+  ['Your commits tell a story…', 'a horror story.', 'review'],
+  ['Your code is truly original…', 'no best practice ever came near it.', 'review'],
+  ['You write code that lasts…', 'that 2019 hotfix is still there.', 'review'],
+  ['Your PR description is flawless…', 'shame it has nothing to do with the code.', 'review'],
+  ['You have 100% test coverage…', 'of commented-out tests.', 'review'],
+  ['You’re very proactive…', 'you took down prod without anyone asking.', 'feedback'],
+  ['You’re a great team player…', 'the team plays and you watch.', 'feedback'],
+  ['Your potential is huge…', 'and safely stored away, never used.', 'feedback'],
+  ['You’re a great communicator…', 'you talked for 14 minutes of a 15-minute standup.', 'feedback'],
+  ['You’re very resilient…', 'you’ve shipped the same bug to prod five times.', 'feedback'],
+  ['You handle deadlines really well…', 'you just ignore them.', 'feedback'],
+  ['You deliver a lot…', 'of bugs, mostly.', 'feedback'],
+  ['You’re always ahead of your time…', 'that’s why you’re never on time for standup.', 'feedback'],
+  ['Nobody uses AI like you do…', 'nobody else dares to hit accept all without reading.', 'feedback'],
+  ['You never stop improving…', 'every version of the bug is better than the last.', 'feedback'],
 ]
 
 // Commit messages keep straight quotes: they imitate what git prints

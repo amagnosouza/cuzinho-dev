@@ -138,7 +138,7 @@ export default function Certificado() {
   return (
     <section className="dark"><div className="wrap">
       <PageHead
-        n="06" label={t.title} aside={t.aside}
+        n="07" label={t.title} aside={t.aside}
         title={t.head} mute={t.mute}
         sub={t.sub}
       />

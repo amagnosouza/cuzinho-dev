@@ -59,7 +59,7 @@ export default function Commit() {
   return (
     <section><div className="wrap">
       <PageHead
-        n="04" label="Commit" aside={t.aside(COMMITS.length)}
+        n="05" label="Commit" aside={t.aside(COMMITS.length)}
         title={t.head} mute={t.mute}
         sub={t.sub}
       />

@@ -101,7 +101,7 @@ export default function Bingo() {
   return (
     <section><div className="wrap">
       <PageHead
-        n="05" label="Bingo" aside="5 × 5"
+        n="06" label="Bingo" aside="5 × 5"
         title={t.head} mute={t.mute}
         sub={t.sub}
       />

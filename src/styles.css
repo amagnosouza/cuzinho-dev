@@ -108,8 +108,9 @@ h2 span{color:var(--mute)}
 .daily{display:grid;grid-template-columns:120px 1fr auto;gap:20px;align-items:baseline;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:28px}
 .daily p{margin:0;font-weight:300;font-size:clamp(24px,3.4vw,40px);line-height:1.1;letter-spacing:-.03em;text-wrap:balance}
 .daily small{display:block;font-size:15px;letter-spacing:0;color:var(--ink-soft);margin-top:12px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:1px;background:var(--dark-line);border:1px solid var(--dark-line)}
-.card{position:relative;display:grid;grid-template-rows:auto 1fr auto;gap:28px;min-height:280px;background:var(--dark);padding:22px;text-decoration:none;color:var(--bg);transition:background .25s}
+/* Lines drawn by each card's shadow, so an incomplete last row stays dark instead of showing the gap color */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:1px;background:var(--dark);border:1px solid var(--dark-line)}
+.card{box-shadow:0 0 0 1px var(--dark-line);position:relative;display:grid;grid-template-rows:auto 1fr auto;gap:28px;min-height:280px;background:var(--dark);padding:22px;text-decoration:none;color:var(--bg);transition:background .25s}
 .card:hover{background:var(--dark-2)}
 .card .art{height:72px;display:flex;align-items:flex-end;gap:6px}
 .card .art i{flex:1;border:1px solid var(--dark-line);border-bottom:0}
@@ -153,6 +154,8 @@ ul.dict{list-style:none;margin:0;padding:0}
 .gen-top{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
 .gen-body{padding:clamp(28px,6vw,72px) clamp(20px,5vw,56px);display:grid;gap:28px}
 .gen .quote{font-weight:300;font-size:clamp(28px,4.8vw,56px);line-height:1.05;letter-spacing:-.04em;margin:0;text-wrap:balance;overflow-wrap:anywhere}
+.gen .quote .punch{color:var(--hot);animation:punch .5s .9s both}
+@keyframes punch{from{opacity:0;transform:translateY(.15em)}}
 pre.term{background:var(--ink);color:var(--bg);border:0;font-size:clamp(12px,1.5vw,14px);padding:16px 18px;white-space:pre-wrap;overflow-wrap:anywhere}
 pre.term .p{color:var(--hot)}
 label.check{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-soft);cursor:pointer}
