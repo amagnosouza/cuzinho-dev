@@ -22,7 +22,10 @@ export function navigate(to: string, { replace = false } = {}) {
 export function useLocation() {
   useSyncExternalStore(subscribe, snapshot)
   const path = location.pathname.replace(/\/+$/, '') || '/'
-  return { path, hash: location.hash }
+  return {
+    path, hash:
+      location.hash
+  }
 }
 
 type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & { to: string }
